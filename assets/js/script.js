@@ -179,14 +179,11 @@ if (timeline && timelineItems.length) {
 /* =====================================
    5. CONTACT FORM VALIDATION
 ===================================== */
-
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
 if (contactForm) {
-
-    contactForm.addEventListener("submit", (event) => {
-
+    contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
         if (!contactForm.checkValidity()) {
@@ -198,34 +195,67 @@ if (contactForm) {
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
+        // Check required fields
         if (!name || !email || !message) {
-
-            if (formStatus) {
-                formStatus.textContent =
-                    "Please complete all the fields.";
-            }
-
+            formStatus.textContent = "Please complete all the fields.";
             return;
         }
 
-        const recipient = "YOUR_EMAIL@example.com";
-
-        const subject = encodeURIComponent(
-            `Portfolio message from ${name}`
-        );
-
-        const body = encodeURIComponent(
-            `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-        );
-
-        if (formStatus) {
+        // Validate name
+        if (name.length > 100) {
             formStatus.textContent =
-                "Opening your email application to send the message...";
+                "Name must be under 100 characters.";
+            return;
         }
 
-        window.location.href =
-            `mailto:${recipient}?subject=${subject}&body=${body}`;
+        // Validate email
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        if (email.length > 150 || !emailPattern.test(email)) {
+            formStatus.textContent =
+                "Please enter a valid email address.";
+            return;
+        }
+
+        // Validate message
+        if (message.length > 5000) {
+            formStatus.textContent =
+                "Message must be under 5000 characters.";
+            return;
+        }
+
+        formStatus.textContent = "Sending your message...";
+
+        try {
+            const response = await fetch("http://localhost:5000/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message
+                })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || "Something went wrong.");
+            }
+
+            formStatus.textContent =
+                "Thank you! Your message has been sent successfully.";
+
+            contactForm.reset();
+
+        } catch (error) {
+            console.error("Contact form error:", error);
+
+            formStatus.textContent =
+                error.message || "Unable to send your message. Please try again.";
+        }
     });
 }
 
