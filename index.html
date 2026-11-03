@@ -1,3 +1,554 @@
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="J Hasini's developer portfolio — CSE student, developer and technology enthusiast.">
+    <meta name="author" content="J Hasini">
+
+    <title>Hasini | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
 </head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="#home" class="logo">Hasini<span>.</span></a>
+
+            <nav class="navbar" id="primary-navigation" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+    <a href="assets/resume/hasini resume.pdf"
+       target="_blank"
+       rel="noopener noreferrer">
+        Resume 
+    </a>
+</li>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button"
+                    aria-label="Switch to dark theme" title="Toggle theme">☾</button>
+
+                <button class="menu-toggle" id="menu-toggle" type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="primary-navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero section" id="home">
+            <div class="container hero-container">
+
+                <div class="hero-content">
+                    <p class="eyebrow"><span class="status-dot"></span> COMPUTER SCIENCE STUDENT</p>
+
+                    <h1>
+                        Hi, I'm <span class="gradient-text">Hasini.</span>
+                        <br>
+                        I build things for the <em>digital world.</em>
+                    </h1>
+
+                    <p class="hero-description">
+                        A curious developer and problem solver, passionate about
+                        technology, creative ideas and building meaningful digital experiences.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Explore my work ↗</a>
+                        <a href="#contact" class="btn btn-outline">Let's connect</a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://github.com/hasini8-debug"
+                           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                        <span>•</span>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="portrait-frame">
+                        <!-- Replace this placeholder with your own photo -->
+                        <div class="portrait-placeholder">
+                             <img
+        src="assets/images/mypic.png"
+        alt="Portrait of Hasini"
+        class="profile-photo"
+    >
+                        </div>
+                    </div>
+                    <div class="floating-note note-top">✦ Always learning</div>
+                    <div class="floating-note note-bottom">Building with purpose ♡</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about-section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+                    <h2>Curiosity meets <span class="gradient-text">creativity.</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm J Hasini, a third-year Computer Science and Engineering
+                            student at PES College of Engineering, Mandya.
+                        </p>
+
+                        <p>
+                            I enjoy exploring how technology works and turning ideas
+                            into practical solutions. From programming and web development
+                            to cloud technologies, I'm constantly learning and experimenting.
+                        </p>
+
+                        <p>
+                            I believe good development is about more than writing code.
+                            It's about solving problems, understanding people and creating
+                            experiences that are simple and useful.
+                        </p>
+                    </div>
+
+                    <div class="about-highlight">
+                        <span class="highlight-icon">✧</span>
+                        <h3>My approach</h3>
+                        <p>Learn continuously. Build thoughtfully. Improve consistently.</p>
+                        <div class="about-tags">
+                            <span>Problem solving</span>
+                            <span>Creative thinking</span>
+                            <span>Continuous learning</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY TOOLKIT</p>
+                    <h2>Skills & <span class="gradient-text">technologies.</span></h2>
+                    <p class="section-description">
+                        Technologies I've explored and tools I use to bring ideas to life.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>C</h3>
+                        <p>Programming</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>C++</h3>
+                        <p>Programming</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>Java</h3>
+                        <p>Programming</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>Python</h3>
+                        <p>Programming</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>HTML5</h3>
+                        <p>Web development</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>CSS3</h3>
+                        <p>Web development</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>JavaScript</h3>
+                        <p>Web development</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+        alt="Java logo">
+</span>
+                        <h3>Figma</h3>
+                        <p>UI/UX design</p>
+                    </article>
+
+                    <article class="skill-card">
+                        <span class="skill-icon">
+    <img
+        <h1>☁️</h1>
+      
+</span>
+                        <h3>AWS</h3>
+                        <p>Cloud management</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY WORKS</p>
+                    <h2>Things I've <span class="gradient-text">built.</span></h2>
+                    <p class="section-description">
+                        A few projects where learning turned into something real.
+                    </p>
+                </div>
+
+                
+<div class="projects-grid">
+
+    <!-- PROJECT 01: VTU GPTrack -->
+    <article class="project-card">
+        <div class="project-visual project-visual-one">
+            <span class="project-number">01</span>
+             <img src="assets/images/GPTrack.png"
+         alt="VTU GPTrack application screenshot">
+    <span class="project-category">WEB DEVELOPMENT</span>
+        </div>
+
+        <div class="project-content">
+            <p class="project-label">FEATURED PROJECT</p>
+            <h3>VTU GPTrack</h3>
+
+            <p>
+                A grade point tracking web application designed to
+                calculate SGPA and CGPA for VTU students.
+            </p>
+
+            <div class="tech-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="project-actions">
+                <a href="https://inisah-web.github.io/VTU-GPTrack/"
+                   target="_blank" rel="noopener noreferrer">Live demo ↗</a>
+
+                <a href="https://github.com/hasini8-debug/VTU-GPTrack"
+                   target="_blank" rel="noopener noreferrer">Source code ↗</a>
+
+                <button class="details-button" type="button"
+                    data-project="gptrack">Details +</button>
+            </div>
+        </div>
+    </article>
+
+
+    <!-- PROJECT 02: CraveCuisine -->
+    <article class="project-card">
+        <div class="project-visual project-visual-two">
+            <span class="project-number">02</span>
+            <img src="assets/images/figma.png"
+         alt="CraveCuisine Figma UI UX design">
+            <span class="project-category">UI/UX DESIGN</span>
+        </div>
+
+        <div class="project-content">
+            <p class="project-label">DESIGN PROJECT</p>
+            <h3>CraveCuisine</h3>
+
+            <p>
+                A home-cooking recipe book concept designed in Figma,
+                featuring recipes and step-by-step cooking instructions.
+            </p>
+
+            <div class="tech-tags">
+                <span>Figma</span>
+                <span>UI/UX</span>
+                <span>Prototyping</span>
+            </div>
+
+            <span class="coming-soon">Design showcase coming soon ♡</span>
+        </div>
+    </article>
+
+
+    <!-- PROJECT 03: Gaming Hub -->
+    <article class="project-card">
+        <div class="project-visual project-visual-one">
+            <span class="project-number">03</span>
+            <img src="assets/images/gaming.png"
+         alt="Gaming Hub project screenshot">
+            <span class="project-category">GAMING</span>
+        </div>
+
+        <div class="project-content">
+            <p class="project-label">FEATURED PROJECT</p>
+
+            <h3>Gaming Hub</h3>
+
+            <p>
+                A gaming-focused project showcasing my interest
+                in interactive digital experiences.
+            </p>
+
+            <div class="tech-tags">
+                <span>To be updated</span>
+            </div>
+
+            <span class="coming-soon">Project details coming soon ♡</span>
+        </div>
+    </article>
+
+
+    <!-- PROJECT 04: Upcoming Projects -->
+    <article class="project-card coming-soon-card">
+        <div class="project-visual project-visual-two">
+            <span class="project-number">04</span>
+            <img src="assets/images/others.png"
+         alt="Upcoming development projects">
+            <span class="project-category">IN PROGRESS</span>
+        </div>
+
+        <div class="project-content">
+            <p class="project-label">UPCOMING PROJECT</p>
+            <h3>More ideas in the making</h3>
+
+            <p>
+                Exploring new ideas, strengthening my development
+                skills and working on projects worth sharing.
+            </p>
+
+            <div class="tech-tags">
+                <span>Learning</span>
+                <span>Building</span>
+            </div>
+
+            <span class="coming-soon">Coming soon ♡</span>
+        </div>
+    </article>
+
+</div>
+
+        <!-- EDUCATION -->
+        <section class="section education-section" id="education">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="eyebrow">MY JOURNEY</p>
+                    <h2>Learning, growing & <span class="gradient-text">evolving.</span></h2>
+                </div>
+
+                <div class="timeline">
+
+    <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <p class="timeline-date">CURRENTLY</p>
+        <h3>B.E. in Computer Science and Engineering</h3>
+        <p>PES College of Engineering, Mandya</p>
+        <span class="timeline-note">
+            Pursuing my undergraduate degree at PES College of Engineering, 
+            building a strong academic foundation.
+        </span>
+    </article>
+
+    <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <p class="timeline-date">AWS & DEVOPS</p>
+        <h3>Employability.life</h3>
+        <p>
+            A six-week learning journey exploring cloud infrastructure, 
+            AWS services, deployment workflows and automation concepts to 
+            understand modern software delivery.
+        </p>
+    </article>
+
+    <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <p class="timeline-date">Generative AI Workshop</p>
+        <h3>NxtWave</h3>
+        <p>
+            Gained exposure to Generative AI concepts, model development workflows 
+            and the possibilities of building intelligent applications.
+        </p>
+    </article>
+
+    <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <p class="timeline-date">Learning Beyond the Classroom</p>
+        <h3>Coursera Courses</h3>
+        <p>
+            Strengthening my knowledge across Computer Networks, Cybersecurity, 
+            Artificial Intelligence, Software Engineering and Algorithm Design through specialised online courses.
+        </p>
+    </article>
+
+    <article class="timeline-item">
+        <span class="timeline-dot"></span>
+        <p class="timeline-date">CraveCuisine – UI/UX DESIGN</p>
+        <h3>Figma Design Project</h3>
+        <p>
+            Conceptualised a home-cooking platform with an intuitive recipe-book interface, 
+            thoughtfully structured instructions and a user-friendly experience.
+        </p>
+    </article>
+
+</div>
+
+            </div>
+        </section>
+        <div class="resume-section">
+    <p class="resume-eyebrow">GET TO KNOW ME BETTER</p>
+
+    <h3>A little more about my journey.</h3>
+
+    <p class="resume-description">
+        Explore my academic background, technical skills
+        and experiences in detail.
+    </p>
+
+    <a href="assets/resume/hasini resume.pdf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="resume-link">
+        <span>View my resume</span>
+        <span class="resume-arrow">↗</span>
+    </a>
+</div>
+
+        <!-- CONTACT -->
+        <section class="section contact-section" id="contact">
+            <div class="container contact-container">
+
+                <div class="contact-intro">
+                    <p class="eyebrow">LET'S CONNECT</p>
+                    <h2>I'd love to <span class="gradient-text">hear from you.</span></h2>
+                    <p>
+                        Whether it's a professional opportunity, a question about my work or 
+                        a conversation about technology, feel free to reach out.
+                    </p>
+                    <a class="contact-social-links" href="https://www.linkedin.com/in/hasini-gowda-j80460/"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="LinkedIn Profile">
+    LinkedIn <span>↗</span>
+</a>
+                    <a class="contact-email" href="mailto:hasinigowda8@gmail.com">
+                        MAIL ↗
+                    </a>
+
+                    <a class="contact-github"
+                       href="https://github.com/hasini8-debug"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub ↗
+                    </a>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name"
+                            placeholder="Enter your name" required minlength="2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell me what's on your mind..." required minlength="10"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary submit-button" type="submit">
+                        Submit↗
+                    </button>
+
+                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+   <!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container footer-container">
+        <p>Designed & developed by Hasini</p>
+    </div>
+</footer>
+
+</body>
+</html>
