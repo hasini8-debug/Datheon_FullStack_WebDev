@@ -39,6 +39,7 @@
         Resume 
     </a>
 </li>
+</ul>
             </nav>
 
             <div class="header-actions">
@@ -80,13 +81,6 @@
                         <a href="#projects" class="btn btn-primary">Explore my work ↗</a>
                         <a href="#contact" class="btn btn-outline">Let's connect</a>
                     </div>
-
-                    <div class="hero-socials">
-                        <a href="https://github.com/hasini8-debug"
-                           target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-                        <span>•</span>
-                        <a href="#contact">Contact</a>
-                    </div>
                 </div>
 
                 <div class="hero-visual">
@@ -113,14 +107,14 @@
 
                 <div class="section-heading">
                     <p class="eyebrow">A LITTLE ABOUT ME</p>
-                    <h2>Curiosity meets <span class="gradient-text">creativity.</span></h2>
+                    <h2>Curiosity meets <span class="gradient-text" id="butterfly-target">creativity.</span></h2>
                 </div>
 
                 <div class="about-grid">
                     <div class="about-text">
                         <p>
                             I'm J Hasini, a third-year Computer Science and Engineering
-                            student at PES College of Engineering, Mandya.
+                            student at <br>PES College of Engineering, Mandya.
                         </p>
 
                         <p>
@@ -169,7 +163,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"
-        alt="Java logo">
+        alt="C logo">
 </span>
                         <h3>C</h3>
                         <p>Programming</p>
@@ -179,7 +173,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-        alt="Java logo">
+        alt="C++ logo">
 </span>
                         <h3>C++</h3>
                         <p>Programming</p>
@@ -199,7 +193,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-        alt="Java logo">
+        alt="Python logo">
 </span>
                         <h3>Python</h3>
                         <p>Programming</p>
@@ -209,7 +203,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-        alt="Java logo">
+        alt="HTML logo">
 </span>
                         <h3>HTML5</h3>
                         <p>Web development</p>
@@ -219,7 +213,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-        alt="Java logo">
+        alt="CSS logo">
 </span>
                         <h3>CSS3</h3>
                         <p>Web development</p>
@@ -229,7 +223,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-        alt="Java logo">
+        alt="JavaScript logo">
 </span>
                         <h3>JavaScript</h3>
                         <p>Web development</p>
@@ -239,7 +233,7 @@
                         <span class="skill-icon">
     <img
         src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-        alt="Java logo">
+        alt="Figma logo">
 </span>
                         <h3>Figma</h3>
                         <p>UI/UX design</p>
@@ -247,9 +241,7 @@
 
                     <article class="skill-card">
                         <span class="skill-icon">
-    <img
-        <h1>☁️</h1>
-      
+    <span class="aws-icon">☁️</span>
 </span>
                         <h3>AWS</h3>
                         <p>Cloud management</p>
@@ -397,6 +389,8 @@
     </article>
 
 </div>
+</div>
+</section>
 
         <!-- EDUCATION -->
         <section class="section education-section" id="education">
@@ -404,7 +398,7 @@
 
                 <div class="section-heading">
                     <p class="eyebrow">MY JOURNEY</p>
-                    <h2>Learning, growing & <span class="gradient-text">evolving.</span></h2>
+                    <h2 id="journey-heading">Learning, growing & <span class="gradient-text">evolving.</span></h2>
                 </div>
 
                 <div class="timeline">
@@ -484,71 +478,167 @@
     </a>
 </div>
 
-        <!-- CONTACT -->
-        <section class="section contact-section" id="contact">
-            <div class="container contact-container">
+        
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+    <div class="container contact-container">
 
-                <div class="contact-intro">
-                    <p class="eyebrow">LET'S CONNECT</p>
-                    <h2>I'd love to <span class="gradient-text">hear from you.</span></h2>
-                    <p>
-                        Whether it's a professional opportunity, a question about my work or 
-                        a conversation about technology, feel free to reach out.
-                    </p>
-                    <a class="contact-social-links" href="https://www.linkedin.com/in/hasini-gowda-j80460/"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="LinkedIn Profile">
-    LinkedIn <span>↗</span>
-</a>
-                    <a class="contact-email" href="mailto:hasinigowda8@gmail.com">
-                        MAIL ↗
-                    </a>
+        <div class="contact-intro">
+            <p class="eyebrow">LET'S CONNECT</p>
 
-                    <a class="contact-github"
-                       href="https://github.com/hasini8-debug"
-                       target="_blank" rel="noopener noreferrer">
-                        GitHub ↗
-                    </a>
-                </div>
+            <h2>
+                I'd love to <span class="gradient-text">hear from you.</span>
+            </h2>
 
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name"
-                            placeholder="Enter your name" required minlength="2">
-                    </div>
+            <p>
+                Whether it's a professional opportunity, a question about my work
+                or a conversation about technology, feel free to reach out.
+            </p>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email"
-                            placeholder="you@example.com" required>
-                    </div>
+            <a class="contact-social-links"
+               href="https://www.linkedin.com/in/hasini-gowda-j80460/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn Profile">
+                LinkedIn <span>↗</span>
+            </a>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5"
-                            placeholder="Tell me what's on your mind..." required minlength="10"></textarea>
-                    </div>
+            <a class="contact-email" href="mailto:hasinigowda8@gmail.com">
+                MAIL ↗
+            </a>
 
-                    <button class="btn btn-primary submit-button" type="submit">
-                        Submit↗
-                    </button>
+            <a class="contact-github"
+               href="https://github.com/hasini8-debug"
+               target="_blank"
+               rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+        </div>
 
-                    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-                </form>
+        <form class="contact-form"
+              id="contact-form"
+              action="https://api.web3forms.com/submit"
+              method="POST">
 
+            <!-- Web3Forms Configuration -->
+            <input type="hidden" name="access_key"
+                   value="7fc48eae-6f9c-40bc-a33c-eee86dbe475a">
+
+            <input type="hidden" name="subject"
+                   value="New Portfolio Contact Message">
+
+            <input type="hidden" name="from_name"
+                   value="Hasini's Portfolio">
+
+            <!-- Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden"
+                   style="display: none;">
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"
+                       id="name"
+                       name="name"
+                       placeholder="Enter your name"
+                       required
+                       minlength="2"
+                       maxlength="100">
             </div>
-        </section>
 
-    </main>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="you@example.com"
+                       required
+                       maxlength="150">
+            </div>
 
-   <!-- FOOTER -->
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Tell me what's on your mind..."
+                          required
+                          minlength="10"
+                          maxlength="5000"></textarea>
+            </div>
+
+            <button class="btn btn-primary submit-button" type="submit">
+                Submit ↗
+            </button>
+
+            <p class="form-status"
+               id="form-status"
+               role="status"
+               aria-live="polite"></p>
+
+        </form>
+
+    </div>
+</section>
+</main>
+
+
+  <!-- FOOTER -->
 <footer class="site-footer">
     <div class="container footer-container">
-        <p>Designed & developed by Hasini</p>
+        <p>Designed & developed by Hasini</p> 
+        <p>© 2026 Hasini. All rights reserved.</p>
     </div>
 </footer>
+<!-- FLOATING BUTTERFLY -->
+<div class="magic-butterfly" id="magic-butterfly">
+    <svg viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
 
+        <defs>
+            <linearGradient id="butterflyPurple" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#17121e"/>
+                <stop offset="55%" stop-color="#48245f"/>
+                <stop offset="100%" stop-color="#9b6bb5"/>
+            </linearGradient>
+        </defs>
+
+        <!-- Left wing -->
+        <g class="butterfly-wing butterfly-wing-left">
+            <path d="M49 42 C35 5 4 3 8 30 C9 47 28 55 47 49 Z"
+                  fill="url(#butterflyPurple)"
+                  stroke="#17121e"
+                  stroke-width="1.5"/>
+            <path d="M45 46 C25 42 17 57 25 68 C34 74 44 59 49 48 Z"
+                  fill="#281536"
+                  stroke="#81559b"
+                  stroke-width="1"/>
+            <circle cx="22" cy="29" r="4" fill="#b38acb" opacity=".7"/>
+        </g>
+
+        <!-- Right wing -->
+        <g class="butterfly-wing butterfly-wing-right">
+            <path d="M51 42 C65 5 96 3 92 30 C91 47 72 55 53 49 Z"
+                  fill="url(#butterflyPurple)"
+                  stroke="#17121e"
+                  stroke-width="1.5"/>
+            <path d="M55 46 C75 42 83 57 75 68 C66 74 56 59 51 48 Z"
+                  fill="#281536"
+                  stroke="#81559b"
+                  stroke-width="1"/>
+            <circle cx="78" cy="29" r="4" fill="#b38acb" opacity=".7"/>
+        </g>
+
+        <!-- Body -->
+        <path d="M50 27 Q46 43 50 65 Q54 43 50 27"
+              fill="#100d15"/>
+
+        <!-- Antennae -->
+        <path d="M49 30 Q35 9 31 17 M51 30 Q65 9 69 17"
+              fill="none"
+              stroke="#21162b"
+              stroke-width="1.5"
+              stroke-linecap="round"/>
+
+    </svg>
+</div>
 </body>
 </html>
