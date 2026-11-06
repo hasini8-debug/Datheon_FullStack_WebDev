@@ -1537,4 +1537,10 @@ img {
         text-align: center;
     }
 }
-
+@media (max-width: 768px) {
+    .site-header {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: var(--bg);
+    }
+}
