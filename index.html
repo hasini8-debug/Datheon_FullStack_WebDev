@@ -318,8 +318,11 @@
             <h3>CraveCuisine</h3>
 
             <p>
-                A home-cooking recipe book concept designed in Figma,
-                featuring recipes and step-by-step cooking instructions.
+             
+    A home-cooking recipe book concept designed in Figma,
+    bringing together curated recipes, clear cooking steps
+    and an easy-to-follow user experience.
+
             </p>
 
             <div class="tech-tags">
@@ -328,7 +331,15 @@
                 <span>Prototyping</span>
             </div>
 
-            <span class="coming-soon">Design showcase coming soon ♡</span>
+            <div class="project-actions">
+    <a
+        href="https://www.figma.com/design/42dcMs8loytTbErFyc0qSM/CraveCuisine?node-id=0-1&t=5LFOOsKyEYdMdTOa-1"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        View Figma Design ↗
+    </a>
+</div>
         </div>
     </article>
 
@@ -586,7 +597,7 @@
 <footer class="site-footer">
     <div class="container footer-container">
         <p>Designed & developed by Hasini</p> 
-        <p>© 2026 Hasini. All rights reserved.</p>
+        <p>© <span id="current-year"></span> Hasini. All rights reserved.</p>
     </div>
 </footer>
 <!-- FLOATING BUTTERFLY -->
@@ -640,5 +651,58 @@
 
     </svg>
 </div>
+<!-- PROJECT DETAILS MODAL -->
+<dialog class="project-dialog" id="project-dialog">
+    <div class="dialog-content">
+
+        <button
+            class="dialog-close"
+            id="dialog-close"
+            aria-label="Close project details"
+            type="button"
+        >
+            &times;
+        </button>
+
+        <p class="eyebrow">FEATURED PROJECT</p>
+
+        <h2 id="dialog-title">VTU GPTrack</h2>
+
+        <p id="dialog-description">
+            VTU GPTrack is a grade point tracking tool designed
+            for VTU students to calculate their SGPA and CGPA
+            easily and efficiently.
+        </p>
+
+        <div class="dialog-tech" id="dialog-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+
+        <div class="dialog-actions">
+            <a
+                href="https://inisah-web.github.io/VTU-GPTrack/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                id="dialog-live"
+            >
+                Live Demo ↗
+            </a>
+
+            <a
+                href="https://github.com/hasini8-debug/VTU-GPTrack"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+                id="dialog-github"
+            >
+                GitHub ↗
+            </a>
+        </div>
+
+    </div>
+</dialog>
 </body>
 </html>

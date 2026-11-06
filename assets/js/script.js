@@ -2,10 +2,11 @@
 /* =====================================
    1. MOBILE NAVIGATION
 ===================================== */
-
+document.documentElement.classList.add("js-enabled");
 const menuToggle = document.getElementById("menu-toggle");
 const navbar = document.getElementById("primary-navigation");
 const navLinks = document.querySelectorAll(".nav-links a");
+
 
 if (menuToggle && navbar) {
     menuToggle.addEventListener("click", () => {
@@ -194,11 +195,12 @@ if (contactForm) {
         const email = document.getElementById("email").value.trim();
         const message = document.getElementById("message").value.trim();
 
-        if (!name || !email || !message) {
-            formStatus.textContent = "Please complete all the fields.";
-            return;
-        }
-
+       if (!name || !email || !message) {
+    if (formStatus) {
+        formStatus.textContent = "Please complete all the fields.";
+    }
+    return;
+}
         if (name.length > 100) {
             formStatus.textContent = "Name must be under 100 characters.";
             return;
@@ -263,25 +265,13 @@ if (contactForm) {
 
             if (submitButton) {
                 submitButton.disabled = false;
-                submitButton.textContent = "Send Message";
+                submitButton.textContent = "Submit ↗";
             }
 
         }
 
     });
 }
-
-
-/* =====================================
-   6. AUTOMATIC FOOTER YEAR
-===================================== */
-
-const currentYear = document.getElementById("current-year");
-
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
-
 
 /* =========================================
    BUTTERFLY SCROLL ANIMATION
@@ -681,7 +671,7 @@ animateFlight(
     previousPosition,
     stage.destination,
     progress,
-      scroll
+    scroll
 );
 
         if (progress >= 1) {
@@ -741,3 +731,9 @@ animateFlight(
     }
 
 });
+
+const currentYear = document.getElementById("current-year");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}

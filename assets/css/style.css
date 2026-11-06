@@ -660,19 +660,10 @@ img {
 
 /* Project images */
 
-.project-image {
-    position: relative;
+.project-visual img {
+    position: absolute;
+    inset: 0;
 
-    width: 100%;
-    height: 230px;
-
-    overflow: hidden;
-    border-radius: 16px 16px 0 0;
-
-    background: var(--surface);
-}
-
-.project-image img {
     width: 100%;
     height: 100%;
 
@@ -683,11 +674,11 @@ img {
     transition: transform 0.4s ease;
 }
 
-.project-card:hover .project-image img {
+.project-card:hover .project-visual img {
     transform: scale(1.04);
 }
 
-.project-image .project-category {
+.project-visual .project-category {
     position: absolute;
     bottom: 14px;
     left: 14px;
@@ -696,7 +687,7 @@ img {
     padding: 7px 12px;
     border-radius: 20px;
 
-    background: rgba(56, 38, 63, 0.88);
+    background: rgba(113, 97, 120, 0.40);
     color: #FFFFFF;
 
     font-size: 0.68rem;
@@ -757,61 +748,6 @@ img {
 }
 
 
-/* =====================================
-   8. PROJECT DETAILS MODAL
-===================================== */
-
-.project-dialog {
-    width: min(90%, 520px);
-    margin: auto;
-    padding: 0;
-
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-
-    background: var(--bg);
-    color: var(--text);
-
-    box-shadow: var(--shadow);
-}
-
-.project-dialog::backdrop {
-    background: rgba(20, 12, 25, 0.65);
-    backdrop-filter: blur(5px);
-}
-
-.dialog-content {
-    position: relative;
-    padding: 40px;
-}
-
-.dialog-content h2 {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.dialog-content > p:not(.eyebrow) {
-    color: var(--muted);
-    margin-bottom: 15px;
-}
-
-.dialog-content .btn {
-    margin-top: 25px;
-}
-
-.dialog-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-
-    background: none;
-    border: none;
-
-    color: var(--text);
-    font-size: 2rem;
-}
-
 
 /* JOURNEY TIMELINE */
 
@@ -860,19 +796,22 @@ img {
 
 
 /* Timeline items */
-
 .timeline-item {
-
     position: relative;
-
     padding-bottom: 40px;
-
-    opacity: 0;
-
-    transform: translateY(30px);
-
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
+.js-enabled .timeline-item {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.js-enabled .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -1070,24 +1009,6 @@ img {
     .timeline-dot {
 
         left: -38px;
-
-    }
-
-}
-
-
-
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .timeline-item {
-
-        opacity: 1;
-
-        transform: none;
-
-        transition: none;
 
     }
 
@@ -1341,7 +1262,7 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .project-image {
+    .project-visual {
         height: 190px;
     }
 
@@ -1407,10 +1328,9 @@ img {
         transition-duration: 0.01ms !important;
     }
 
-    .timeline-item {
-        opacity: 1;
-        transform: none;
-    }
+    .js-enabled .timeline-item {
+    opacity: 1;
+    transform: none;
 }
 /* =====================================
    MAGIC PURPLE BUTTERFLY
@@ -1490,5 +1410,129 @@ img {
 
     50% {
         margin-top: -4px;
+    }
+}
+
+/* =====================================
+   PROJECT DETAILS MODAL
+===================================== */
+
+.project-dialog {
+    width: min(90%, 600px);
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: var(--surface);
+    color: var(--text);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+.project-dialog::backdrop {
+    background: rgba(15, 15, 25, 0.65);
+    backdrop-filter: blur(6px);
+}
+
+.dialog-content {
+    position: relative;
+    padding: 45px;
+}
+
+.dialog-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dialog-close:hover {
+    background: var(--primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.dialog-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    margin: 12px 0 16px;
+    color: var(--text);
+}
+
+.dialog-content p:not(.eyebrow) {
+    color: var(--muted);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.dialog-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.dialog-tech span {
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.85rem;
+}
+
+.dialog-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.project-dialog[open] {
+    animation: dialogAppear 0.3s ease;
+}
+
+@keyframes dialogAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Mobile modal */
+
+@media (max-width: 600px) {
+    .project-dialog {
+        width: calc(100% - 30px);
+        border-radius: 20px;
+    }
+
+    .dialog-content {
+        padding: 35px 24px;
+    }
+
+    .dialog-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .dialog-actions {
+        flex-direction: column;
+    }
+
+    .dialog-actions .btn {
+        width: 100%;
+        text-align: center;
     }
 }
