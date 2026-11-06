@@ -45,27 +45,12 @@ Datheon_FullStack_WebDev/
 ├── assets/
 │   ├── css/
 │   ├── js/
+│   ├── resume/
 │   └── images/
 │
 ├── index.html
 └── README.md
 ```
-
-## 🚀 Run Locally
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/hasini8-debug/Datheon_FullStack_WebDev.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd Datheon_FullStack_WebDev
-   ```
-
-3. Open `index.html` in your browser or use VS Code Live Server.
 
 ## 🌐 Live Demo
 
