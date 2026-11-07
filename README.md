@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="https://hasini-portfolio-mpmqyniec-hasinii.vercel.app/">🌐 Live Portfolio</a> •
+  <a href="http://hasini-portfolio-xi.vercel.app/">🌐 Live Portfolio</a> •
   <a href="https://github.com/hasini8-debug">GitHub Profile</a>
 </p>
 
