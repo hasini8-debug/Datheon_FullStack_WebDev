@@ -368,8 +368,25 @@ img {
 
     display: flex;
     justify-content: center;
-
+    overflow: hidden;
     padding: 30px;
+}
+@media (max-width: 768px) {
+    .hero-container {
+        grid-template-columns: 1fr; /* Stack text and image vertically */
+        gap: 35px; /* Reduce the large gap for mobile */
+    }
+    .note-top {
+        right: 0; /* Bring it inside the boundary */
+    }
+    .note-bottom {
+        left: 0; /* Bring it inside the boundary */
+    }
+    
+    .floating-note {
+        padding: 8px 12px;
+        font-size: 0.75rem; /* Slightly smaller text for mobile */
+    }
 }
 
 .portrait-frame {
@@ -1399,21 +1416,19 @@ img {
 }
 
 /* Gentle floating when perched */
-
 .magic-butterfly.perched {
     animation: butterfly-float 2.5s ease-in-out infinite;
 }
 
 @keyframes butterfly-float {
     0%, 100% {
-        margin-top: 0;
+        translate: 0 0;
     }
 
     50% {
-        margin-top: -4px;
+        translate: 0 -4px;
     }
 }
-
 /* =====================================
    PROJECT DETAILS MODAL
 ===================================== */
@@ -1511,36 +1526,11 @@ img {
         transform: translateY(0) scale(1);
     }
 }
-
-/* Mobile modal */
-
-@media (max-width: 600px) {
-    .project-dialog {
-        width: calc(100% - 30px);
-        border-radius: 20px;
-    }
-
-    .dialog-content {
-        padding: 35px 24px;
-    }
-
-    .dialog-content h2 {
-        font-size: 1.6rem;
-    }
-
-    .dialog-actions {
-        flex-direction: column;
-    }
-
-    .dialog-actions .btn {
-        width: 100%;
-        text-align: center;
-    }
+.magic-butterfly {
+    pointer-events: none;
+  
 }
-@media (max-width: 768px) {
-    .site-header {
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        background: var(--bg);
-    }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
 }
