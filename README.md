@@ -42,14 +42,14 @@ The portfolio focuses on a clean, interactive, and visually engaging experience 
 ```text
 Datheon_FullStack_WebDev/
 │
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── resume/
-│   └── images/
-│
-├── index.html
-└── README.md
+├── Task1 portfolio
+    ├── assets/
+    ├── css/
+    ├── js/
+    ├── resume/
+    └── images/
+    ├── index.html
+    └── README.md
 ```
 
 ## 🌐 Live Demo
